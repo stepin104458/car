@@ -4,11 +4,11 @@ on: [push]
 jobs:
   build:
     name: cppcheck
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         
       - name: Install cppcheck
         run: sudo apt-get -y install cppcheck
       - name: Cppcheck code
-        run: cppcheck miniproject_c/implementation 
+        run: cppcheck miniproject_c/implementation
